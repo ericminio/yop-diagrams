@@ -1,0 +1,24 @@
+{
+  "name": "yop-sequence-diagram",
+  "version": "1.0.0",
+  "description": "node run create-from input.txt",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha spec/*.spec.js",
+    "start": "node lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericminio/yop-sequence-diagram.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ericminio/yop-sequence-diagram/issues"
+  },
+  "homepage": "https://github.com/ericminio/yop-sequence-diagram#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
+  }
+}
