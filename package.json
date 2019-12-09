@@ -1,8 +1,8 @@
 {
   "name": "yop-sequence-diagram",
   "version": "1.0.0",
-  "description": "node run create-from input.txt",
-  "main": "index.js",
+  "description": "create ascii sequence diagram from json model",
+  "main": "start.js",
   "scripts": {
     "test": "mocha spec/*.spec.js",
     "start": "node start.js league.json"
