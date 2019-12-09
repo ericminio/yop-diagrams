@@ -3,7 +3,7 @@
 # generate diagram
 
 ```
-node start.js leage.json
+node index.js leage.json
 ```
 
 ```
