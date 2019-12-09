@@ -4,7 +4,6 @@ const { create } = require('./lib')
 let fs = require('fs')
 let path = require('path')
 
-console.log(__dirname)
 let input = JSON.parse(fs.readFileSync(path.join('.', process.argv[2])).toString())
 let diagram = create(input)
 
