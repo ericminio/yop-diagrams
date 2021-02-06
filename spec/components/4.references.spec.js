@@ -49,4 +49,31 @@ describe('references', ()=>{
 
         expect(actual).to.deep.equal(expected)
     })
+    it('applies to links', ()=>{
+        let input = {
+            components: [
+                { name:'One', row:0, column:7, width:10, height:3 },
+                { name:'Two', reference:'One', row:6, column:-7, width:10, height:3 },
+                { name:'Three', reference:'Two', row:0, column:15, width:10, height:3 },
+                { name:'Four', reference:'Three', row:0, column:12, width:10, height:3 }
+            ],
+            links: [
+                { origin:'Three', path: [
+                    { row:1, column:10 }, { row:1, column:11 }
+                ]}
+            ]
+        }
+        let expected = quiet(`
+                   +--------+ 
+                   | One    |
+                   +--------+
+
+            +--------+     +--------+  +--------+
+            | Two    |     | Three  |--| Four   |
+            +--------+     +--------+  +--------+
+        `)
+        let actual = quiet(create(input))
+
+        expect(actual).to.deep.equal(expected)
+    })
 })
