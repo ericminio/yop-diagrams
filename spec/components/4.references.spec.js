@@ -2,7 +2,7 @@ const { expect } = require('chai')
 const { create } = require('../../lib/components')
 const { quiet } = require ('../quiet')
 
-describe('refrences', ()=>{
+describe('references', ()=>{
 
     it('allows relative position of component', ()=>{
         let input = {
@@ -23,6 +23,27 @@ describe('refrences', ()=>{
                       | Two    |     | Three  |
                       |        |     +--------+
                       +--------+
+        `)
+        let actual = quiet(create(input))
+
+        expect(actual).to.deep.equal(expected)
+    })
+    it('is transitive', ()=>{
+        let input = {
+            components: [
+                { name:'One', row:0, column:7, width:10, height:3 },
+                { name:'Two', reference:'One', row:6, column:-7, width:10, height:3 },
+                { name:'Three', reference:'Two', row:0, column:15, width:10, height:3 }
+            ]
+        }
+        let expected = quiet(`
+                   +--------+ 
+                   | One    |
+                   +--------+
+
+            +--------+     +--------+
+            | Two    |     | Three  |
+            +--------+     +--------+
         `)
         let actual = quiet(create(input))
 
