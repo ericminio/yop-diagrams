@@ -7,8 +7,8 @@ describe('components', ()=>{
     it('are covered', ()=>{
         let input = {
             components: [
-                { name:'First Box', x:0, y:0, width:20, height:5 },
-                { name:'Second Box', x:2, y:25, width:20, height:5 }
+                { name:'First Box', row:0, column:0, width:20, height:5 },
+                { name:'Second Box', row:2, column:25, width:20, height:5 }
             ]
         }
         let expected = quiet(`

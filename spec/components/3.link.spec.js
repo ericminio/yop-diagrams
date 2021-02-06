@@ -7,12 +7,12 @@ describe('link', ()=>{
     it('can be horizontal', ()=>{
         let input = {
             components: [
-                { name:'One', x:3, y:0, width:10, height:4 },
-                { name:'Two', x:3, y:15, width:10, height:4 }
+                { name:'One', row:3, column:0, width:10, height:4 },
+                { name:'Two', row:3, column:15, width:10, height:4 }
             ],
             links: [
                 { name:'one-two', path: [
-                    { x:4, y:10 }, { x:4, y:14 }
+                    { row:4, column:10 }, { row:4, column:14 }
                 ] }
             ]
         }
@@ -29,12 +29,12 @@ describe('link', ()=>{
     it('can be vertical', ()=>{
         let input = {
             components: [
-                { name:'One', x:0, y:0, width:10, height:4 },
-                { name:'Two', x:6, y:0, width:10, height:4 }
+                { name:'One', row:0, column:0, width:10, height:4 },
+                { name:'Two', row:6, column:0, width:10, height:4 }
             ],
             links: [
                 { name:'one-two', path: [
-                    { x:4, y:2 }, { x:5, y:2 }
+                    { row:4, column:2 }, { row:5, column:2 }
                 ] }
             ]
         }
@@ -57,12 +57,12 @@ describe('link', ()=>{
     it('can turn', ()=>{
         let input = {
             components: [
-                { name:'One', x:0, y:0, width:10, height:4 },
-                { name:'Two', x:6, y:10, width:10, height:4 }
+                { name:'One', row:0, column:0, width:10, height:4 },
+                { name:'Two', row:6, column:10, width:10, height:4 }
             ],
             links: [
                 { name:'One-Two', path: [
-                    { x:4, y:2 }, { x:7, y:2 }, { x:7, y:9 }
+                    { row:4, column:2 }, { row:7, column:2 }, { row:7, column:9 }
                 ] }
             ]
         }
