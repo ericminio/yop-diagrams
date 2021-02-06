@@ -54,4 +54,32 @@ describe('link', ()=>{
 
         expect(actual).to.deep.equal(expected)
     })
+    it('can turn', ()=>{
+        let input = {
+            components: [
+                { name:'One', x:0, y:0, width:10, height:4 },
+                { name:'Two', x:6, y:10, width:10, height:4 }
+            ],
+            links: [
+                { name:'One-Two', path: [
+                    { x:4, y:2 }, { x:7, y:2 }, { x:7, y:9 }
+                ] }
+            ]
+        }
+        let expected = quiet(`
+            +--------+ 
+            | One    |
+            |        |     
+            +--------+
+              |
+              |
+              |       +--------+ 
+              +-------| Two    |
+                      |        |     
+                      +--------+
+        `)
+        let actual = quiet(create(input))
+
+        expect(actual).to.deep.equal(expected)
+    })
 })
