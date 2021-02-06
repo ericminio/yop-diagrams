@@ -12,11 +12,11 @@ describe('links', ()=>{
                 { name:'Three', row:6, column:25, width:10, height:3 }
             ],
             links: [
-                { name:'One-Two', path: [
+                { origin:'One', path: [
                     { row:4, column:2 }, { row:7, column:2 }, { row:7, column:9 }
                 ]},
-                { name:'Two-Three', path: [
-                    { row:7, column:20 }, { row:7, column:24 }
+                { origin:'Two', path: [
+                    { row:1, column:10 }, { row:1, column:14 }
                 ]}
             ]
         }
