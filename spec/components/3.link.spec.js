@@ -4,14 +4,16 @@ const { quiet } = require ('../quiet')
 
 describe('link', ()=>{
 
-    it('is aligned with names', ()=>{
+    it('can be horizontal', ()=>{
         let input = {
             components: [
                 { name:'One', x:3, y:0, width:10, height:4 },
                 { name:'Two', x:3, y:15, width:10, height:4 }
             ],
             links: [
-                { start:'First Box', end:'Second Box' }
+                { name:'one-two', path: [
+                    { x:4, y:10 }, { x:4, y:14 }
+                ] }
             ]
         }
         let expected = quiet(`
