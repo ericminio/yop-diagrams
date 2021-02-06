@@ -7,7 +7,7 @@ describe('component', ()=>{
     it('has a top-left positionned name', ()=>{
         let input = {
             components: [
-                { name:'Secret Box', width:20, height:5 }
+                { name:'Secret Box', x:0, y:0, width:20, height:5 }
             ]
         }
         let expected = quiet(`
