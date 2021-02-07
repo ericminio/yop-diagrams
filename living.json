@@ -1,0 +1,30 @@
+{
+    "components": [
+        { "name":"Humans", "row":0, "column":0, "width":42, "height":15 },
+        { "name":"Batman", "reference":"Humans", "row":4, "column":5, "width":15, "height":4 },
+        { "name":"Flash", "reference":"Batman", "row":0, "column":19, "width":15, "height":4 },
+        { "name":"Me", "reference":"Humans", "row":9, "column":10, "width":15, "height":4 },
+
+        { "name":"Meta Humans", "reference":"Humans", "row":17, "column":30, "width":33, "height":10 },
+        { "name":"Wonder Woman", "reference":"Meta Humans", "row":4, "column":5, "width":17, "height":4 },
+
+        { "name":"Aliens", "reference":"Humans", "row":1, "column":55, "width":26, "height":7 },
+        { "name":"Superman", "reference":"Aliens", "row":2, "column":5, "width":17, "height":4 }
+    ],
+    "links": [
+        {
+            "origin": "Batman",
+            "path": [ { "row":1, "column":15 }, { "row":1, "column":18 } ]
+        },
+        {
+            "origin": "Humans",
+            "path": [ { "row":10, "column":42 }, { "row":10, "column":50 }, { "row":16, "column":50 } ]
+        },
+        {
+            "origin": "Humans",
+            "path": [ 
+                { "row":10, "column":42 }, { "row":10, "column":50 }, 
+                { "row":10, "column":65 }, { "row":8, "column":65 } ]
+        }
+    ]
+}
