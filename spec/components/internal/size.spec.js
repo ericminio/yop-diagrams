@@ -1,5 +1,6 @@
 const { expect } = require('chai')
-const { create, emptyDiagram } = require('../../../lib/components')
+const { emptyDiagram } = require('../../../lib/components')
+const { absolutePosition } = require('../../../lib/geometry')
 
 describe('size', ()=>{
 
@@ -9,6 +10,9 @@ describe('size', ()=>{
                 { name:'Secret Box', row:0, column:0, width:20, height:5 }
             ]
         }
+        input.components.forEach((component)=>{
+            component.absolutePosition = absolutePosition(component, input.components)
+        })
         let diagram = emptyDiagram(input)
         
         expect(diagram.length).to.equal(5)
@@ -23,6 +27,9 @@ describe('size', ()=>{
                 { name:'Two', row:0, column:0, width:10, height:3 }
             ]
         }
+        input.components.forEach((component)=>{
+            component.absolutePosition = absolutePosition(component, input.components)
+        })
         let diagram = emptyDiagram(input)
         
         expect(diagram.length).to.equal(5)
