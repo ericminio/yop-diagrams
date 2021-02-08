@@ -9,7 +9,7 @@ describe('references', ()=>{
             components: [
                 { name:'One', row:0, column:0, width:10, height:4 },
                 { name:'Two', row:6, column:10, width:10, height:4 },
-                { name:'Three', reference:'Two', row:0, column:15, width:10, height:3 }
+                { name:'Three', origin:'Two', row:0, column:15, width:10, height:3 }
             ]
         }
         let expected = quiet(`
@@ -32,8 +32,8 @@ describe('references', ()=>{
         let input = {
             components: [
                 { name:'One', row:0, column:7, width:10, height:3 },
-                { name:'Two', reference:'One', row:6, column:-7, width:10, height:3 },
-                { name:'Three', reference:'Two', row:0, column:15, width:10, height:3 }
+                { name:'Two', origin:'One', row:6, column:-7, width:10, height:3 },
+                { name:'Three', origin:'Two', row:0, column:15, width:10, height:3 }
             ]
         }
         let expected = quiet(`
@@ -53,9 +53,9 @@ describe('references', ()=>{
         let input = {
             components: [
                 { name:'One', row:0, column:7, width:10, height:3 },
-                { name:'Two', reference:'One', row:6, column:-7, width:10, height:3 },
-                { name:'Three', reference:'Two', row:0, column:15, width:10, height:3 },
-                { name:'Four', reference:'Three', row:0, column:12, width:10, height:3 }
+                { name:'Two', origin:'One', row:6, column:-7, width:10, height:3 },
+                { name:'Three', origin:'Two', row:0, column:15, width:10, height:3 },
+                { name:'Four', origin:'Three', row:0, column:12, width:10, height:3 }
             ],
             links: [
                 { origin:'Three', path: [
