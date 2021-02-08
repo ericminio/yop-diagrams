@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { createSequenceDiagram } = require('./lib')
+const { createSequenceDiagram } = require('./lib/sequence')
 const { createComponentDiagram } = require('./lib/components')
 let fs = require('fs')
 let path = require('path')

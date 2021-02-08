@@ -1,5 +1,5 @@
 const { expect } = require('chai')
-const { create } = require('../lib')
+const { create } = require('../lib/sequence')
 const { quiet } = require ('./quiet')
 
 describe('multi-lines message', ()=>{
