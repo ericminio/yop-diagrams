@@ -6,7 +6,9 @@
   "bin": "./index.js",
   "scripts": {
     "test": "mocha \"./**/*.spec.js\"",
-    "start": "node start.js league.json"
+    "start": "node start.js league.json",
+    "cucumber": "./node_modules/.bin/cucumber-js  --exit --require spec/steps spec/*.feature",
+    "serve": "node serve"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,9 @@
   "homepage": "https://github.com/ericminio/yop-sequence-diagram#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.2.2"
+    "chai-string": "^1.5.0",
+    "mocha": "^6.2.2",
+    "@cucumber/cucumber": "^7.0.0-rc.0",
+    "selenium-webdriver": "^4.0.0-beta.2"
   }
 }
