@@ -5,7 +5,7 @@
   "main": "index.js",
   "bin": "./index.js",
   "scripts": {
-    "test": "mocha \"./**/*.spec.js\"",
+    "test": "mocha \"spec/**/*.spec.js\"",
     "start": "node start.js league.json",
     "cucumber": "./node_modules/.bin/cucumber-js  --exit --require spec/steps spec/*.feature",
     "serve": "node serve"
